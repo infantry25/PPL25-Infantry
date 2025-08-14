@@ -16,8 +16,11 @@ class Configuration extends Model
     protected function getImageUrlAttribute()
     {
         $image = $this->logo;
-        if (!str_contains($image, 'http')){
-            return asset('storage/' . $image);
+        if (!str_contains($image, 'http')) {
+            // Buat URL
+            $url = asset('storage/app/public/' . $image);
+            // Hapus /public kalau ada
+            return str_replace('main/public', 'main', $url);
         }
         return $image;
     }
@@ -25,8 +28,11 @@ class Configuration extends Model
     protected function getIconUrlAttribute()
     {
         $image = $this->icon;
-        if (!str_contains($image, 'http')){
-            return asset('storage/' . $image);
+        if (!str_contains($image, 'http')) {
+            // Buat URL
+            $url = asset('storage/app/public/' . $image);
+            // Hapus /public kalau ada
+            return str_replace('main/public', 'main', $url);
         }
         return $image;
     }

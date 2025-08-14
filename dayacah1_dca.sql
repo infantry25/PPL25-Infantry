@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 14, 2025 at 08:48 AM
+-- Generation Time: Jul 30, 2025 at 04:36 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -202,10 +202,7 @@ INSERT INTO `partnerships` (`id`, `nama`, `email`, `perihal`, `file`, `kode_tike
 (8, 'juli 11', 'fb.ipin@gmail.com', 'juli 11', 'partnership-files/NvcsT4MFmPxTelz3iQwYHBlvOcQjuPiOaoX1EEwa.pdf', '8NJEYTAX', 'Pending', NULL, '2025-07-11 09:21:16', '2025-07-11 09:34:11'),
 (9, 'karin', 'karinanafa22@gmail.com', 'pengajuan kerjasama', NULL, 'EQLC13TP', 'Pending', NULL, '2025-07-18 20:51:09', '2025-07-18 20:51:09'),
 (10, 'karin', 'karinanafa22@gmail.com', 'pengajuan kerjasama', 'partnership-files/ByCRcL8swJ6mun6GbikTzVKsMuNsAIHX7A8VJpuO.pdf', 'J5GPZNMI', 'Pending', NULL, '2025-07-18 20:52:37', '2025-07-18 20:52:37'),
-(11, 'karin', 'karinanafa22@gmail.com', 'pengajuan kerjasama', 'partnership-files/XVgyFkXiCpVGVGIBbHwBu7l7cNvscnPe5ff5VMgs.pdf', '1NZWIRSZ', 'Disetujui', NULL, '2025-07-18 20:55:32', '2025-07-18 20:57:18'),
-(12, 'Azzahra', 'azzahraraar@gmail.com', '12qwaszx', 'partnership-files/aSih1A0CwNvWWaqu9h4UnuaVMOmo7rvMiMkKc5rO.pdf', 'PYJXA9WB', 'Ditolak', NULL, '2025-08-11 06:14:22', '2025-08-11 06:15:11'),
-(13, 'Azzahra PT MNC LIFE', 'azzahraraar@gmail.com', 'PENGAJUAN KERJASAMA', 'partnership-files/8ygDNUhi5DcFngkDl43CGVdQPentNiGE7Ifoo40h.pdf', 'DQHR03ZX', 'Disetujui', NULL, '2025-08-11 06:40:15', '2025-08-11 06:41:28'),
-(14, 'karin', 'karinanafa22@gmail.com', 'pengajuan kerjasama', 'partnership-files/nSFSVGbs1zX69PflSll1RBSaZusj1ba5RtpgzQdb.pdf', 'TJLMSXIR', 'Pending', NULL, '2025-08-12 19:38:11', '2025-08-12 19:38:11');
+(11, 'karin', 'karinanafa22@gmail.com', 'pengajuan kerjasama', 'partnership-files/XVgyFkXiCpVGVGIBbHwBu7l7cNvscnPe5ff5VMgs.pdf', '1NZWIRSZ', 'Disetujui', NULL, '2025-07-18 20:55:32', '2025-07-18 20:57:18');
 
 -- --------------------------------------------------------
 
@@ -543,7 +540,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `partnerships`
 --
 ALTER TABLE `partnerships`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`

@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use App\Models\Configuration;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
@@ -27,4 +28,34 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    // function render($request, Throwable $exception)
+    // {
+    //     $configuration  = Configuration::first();
+    //     $data = [
+    //         'konfig'    => $configuration,
+    //     ];
+    //     if ($this->isHttpException($exception)) {
+    //         if ($exception->getCode() == 404) {
+    //             return response()->view('errors.' . '404', [], $data);
+    //         }
+    //         if ($exception->getCode() == 500) {
+    //             return response()->view('errors.' . '500', [], $data);
+    //         }
+    //     }
+    //     return parent::render($request, $exception);
+    // }
+
+    function render($request, Throwable $exception)
+{
+        if ($this->isHttpException($exception)) {
+            if ($exception->getCode() == 404) {
+                return response()->view('errors.404', [], 404);
+            }
+            if ($exception->getCode() == 500) {
+                return response()->view('errors.500', [], 500);
+            }
+        }
+        return parent::render($request, $exception);
+     }
 }
