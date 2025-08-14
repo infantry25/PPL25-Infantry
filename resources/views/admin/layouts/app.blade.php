@@ -80,7 +80,7 @@
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
                         {{-- <img src="{{ asset('admin/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
-                            alt="User Image"> --}}
+                        alt="User Image"> --}}
 
                         <img src="{{ Auth::user()->image_url }}" class="img-circle elevation-2" alt="User Image">
                     </div>
@@ -106,16 +106,16 @@
 
 
                         @can('list-admin')
-                            <li class="nav-item">
-                                <a href="{{ route('category.index') }}"
-                                    class="nav-link {{ request()->is('admin/category*') ? 'active' : '' }}">
-                                    <i class="nav-icon fas fa-list-ul"></i>
-                                    <p>
-                                        Kategori
-                                        {{-- <span class="right badge badge-danger">New</span> --}}
-                                    </p>
-                                </a>
-                            </li>
+                        <li class="nav-item">
+                            <a href="{{ route('category.index') }}"
+                                class="nav-link {{ request()->is('admin/category*') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-list-ul"></i>
+                                <p>
+                                    Kategori
+                                    {{-- <span class="right badge badge-danger">New</span> --}}
+                                </p>
+                            </a>
+                        </li>
                         @endcan
 
                         <li class="nav-item">
@@ -151,7 +151,7 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a href="{{ route('client.index') }}"
                                 class="nav-link {{ request()->is('admin/client*') ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-handshake"></i>
@@ -160,7 +160,7 @@
                                     {{-- <span class="right badge badge-danger">New</span> --}}
                                 </p>
                             </a>
-                        </li>
+                        </li> -->
 
                         <li class="nav-item">
                             <a href="{{ route('staff.index') }}"
@@ -219,7 +219,12 @@
                                 </p>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a href="{{ route('admin.partnership.index') }}" class="nav-link {{ request()->is('admin/partnership*') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-handshake"></i>
+                                <p>Pengajuan Partnership</p>
+                            </a>
+                        </li>
                         @endcan
 
                         <li class="nav-item">
@@ -259,11 +264,11 @@
         @yield('content')
 
         <footer class="main-footer">
-            <strong>Copyright &copy; 2023 <a href="">PT. Daya Cahya Abadi</a>.</strong>
+            <!-- <strong>Copyright &copy; 2023 <a href="">PT. Daya Cahya Abadi</a>.</strong>
             All rights reserved.
             {{-- <div class="float-right d-none d-sm-inline-block">
                 <b>Version</b> 3.2.0
-            </div> --}}
+            </div> --}} -->
         </footer>
 
         <aside class="control-sidebar control-sidebar-dark">
@@ -359,21 +364,24 @@
                 timer: 2500
             });
 
-            @if (session('success_store'))
-                Toast.fire({
-                    icon: 'success',
-                    title: '{{ session('success_store') }}'
-                })
-            @elseif (session('success_update'))
-                Toast.fire({
-                    icon: 'success',
-                    title: '{{ session('success_update') }}'
-                })
-            @elseif (session('success_delete'))
-                Toast.fire({
-                    icon: 'success',
-                    title: '{{ session('success_delete') }}'
-                })
+            @if(session('success_store'))
+            Toast.fire({
+                icon: 'success',
+                title: '{{ session('
+                success_store ') }}'
+            })
+            @elseif(session('success_update'))
+            Toast.fire({
+                icon: 'success',
+                title: '{{ session('
+                success_update ') }}'
+            })
+            @elseif(session('success_delete'))
+            Toast.fire({
+                icon: 'success',
+                title: '{{ session('
+                success_delete ') }}'
+            })
             @endif
         });
     </script>
